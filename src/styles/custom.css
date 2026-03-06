@@ -1,0 +1,80 @@
+/* Custom CSS classes from Figma export */
+.css-41tze2 {
+  font-family: 'Noto Sans Display Medium', sans-serif;
+  font-weight: 500;
+  line-height: 0;
+  position: relative;
+  flex-shrink: 0;
+  color: #76767a;
+  font-size: 24px;
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: -0.96px;
+}
+
+.css-d7i07 {
+  font-family: 'Noto Sans Display SemiBold', sans-serif;
+  font-weight: 600;
+  line-height: 0;
+  position: relative;
+  flex-shrink: 0;
+  font-size: 40px;
+  text-align: center;
+  color: #fafafa;
+  white-space: nowrap;
+  letter-spacing: -3.2px;
+}
+
+.css-8joh8c {
+  font-family: 'Noto Sans Display SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: #171717;
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: -2.56px;
+}
+
+.css-c1qa06 {
+  font-family: 'Black Han Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  flex-shrink: 0;
+  color: #939499;
+  font-size: 48px;
+  text-align: right;
+  letter-spacing: -1.92px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.css-h62ehy {
+  font-family: 'Noto Sans', sans-serif;
+  min-width: 100%;
+  position: relative;
+  flex-shrink: 0;
+  color: #76767a;
+  font-size: 20px;
+  text-align: right;
+  letter-spacing: -0.8px;
+}
+
+.css-8k7qiv {
+  font-family: 'Noto Sans Medium', sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+  position: absolute;
+  left: 0;
+  font-size: 24px;
+  color: #171717;
+  text-align: left;
+  white-space: nowrap;
+  top: 0;
+  letter-spacing: -0.96px;
+}
+
+/* Animation helper for letter spacing */
+.adjustLetterSpacing {
+  letter-spacing: inherit;
+}
