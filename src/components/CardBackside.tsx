@@ -8,6 +8,7 @@ import { CertificationsContent } from "./CertificationsContent";
 // Import ActivitiesCarousel for Activities tab
 import { ActivitiesCarousel } from "./ActivitiesCarousel";
 import { ProjectsCarousel } from "./ProjectsCarousel";
+import { trackGaEvent } from "../utils/analytics";
 
 // Import Education CardHeaders
 import KnouEducationHeader from "../imports/CardHeader";
@@ -1141,6 +1142,18 @@ function TabButton({ text, isActive, onClick }: TabButtonProps) {
 
 function MainContent() {
   const [activeTab, setActiveTab] = useState<string>("Career");
+
+  const handleTabClick = (nextTab: string) => {
+    const wasActive = activeTab === nextTab;
+
+    setActiveTab(nextTab);
+    trackGaEvent("portfolio_tab_click", {
+      tab_name: nextTab === "Certifications" ? "Certification" : nextTab,
+      tab_key: nextTab.toLowerCase(),
+      was_active: wasActive,
+      ui_surface: "card_backside",
+    });
+  };
   
   const renderContent = () => {
     switch (activeTab) {
@@ -1169,27 +1182,27 @@ function MainContent() {
           <TabButton 
             text="Career" 
             isActive={activeTab === "Career"}
-            onClick={() => setActiveTab("Career")}
+            onClick={() => handleTabClick("Career")}
           />
           <TabButton 
             text="Education" 
             isActive={activeTab === "Education"}
-            onClick={() => setActiveTab("Education")}
+            onClick={() => handleTabClick("Education")}
           />
           <TabButton 
             text="Projects" 
             isActive={activeTab === "Projects"}
-            onClick={() => setActiveTab("Projects")}
+            onClick={() => handleTabClick("Projects")}
           />
           <TabButton 
             text="Activities" 
             isActive={activeTab === "Activities"}
-            onClick={() => setActiveTab("Activities")}
+            onClick={() => handleTabClick("Activities")}
           />
           <TabButton 
             text="Certifications" 
             isActive={activeTab === "Certifications"}
-            onClick={() => setActiveTab("Certifications")}
+            onClick={() => handleTabClick("Certifications")}
           />
         </div>
       </div>
